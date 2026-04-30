@@ -1,1 +1,637 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — Unsentt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --grey-100: #f5f5f5;
+      --grey-200: #e8e8e8;
+      --grey-400: #999999;
+      --grey-600: #555555;
+      --border: #c4c4c4;
+      --red: #ff3b30;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --max-width: 720px;
+      --side-pad: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--grey-200);
+      padding: 0 var(--side-pad);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-badge {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--grey-600);
+      background: var(--grey-100);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--grey-200);
+      margin-bottom: 48px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--grey-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-meta {
+      font-size: 14px;
+      color: var(--grey-400);
+      font-weight: 500;
+    }
+
+    /* ── Intro box ── */
+    .intro-box {
+      background: var(--grey-100);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      border: 1px solid var(--grey-200);
+    }
+
+    .intro-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--grey-600);
+    }
+
+    .intro-box strong { color: var(--black); font-weight: 700; }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 52px; }
+
+    .section-number {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--grey-400);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--grey-600);
+      margin-bottom: 16px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Pill list ── */
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--grey-100);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ── Rule cards — the "not allowed" grid ── */
+    .rules-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .rule-card {
+      background: var(--grey-100);
+      border: 1px solid var(--grey-200);
+      border-radius: 16px;
+      padding: 18px 20px;
+    }
+
+    .rule-card-icon {
+      font-size: 20px;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .rule-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .rule-card-desc {
+      font-size: 13px;
+      color: var(--grey-600);
+      line-height: 1.5;
+    }
+
+    /* ── Warning block ── */
+    .warning {
+      border-left: 3px solid var(--red);
+      padding: 16px 20px;
+      margin: 24px 0;
+      background: #fff5f5;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .warning p {
+      margin: 0 !important;
+      font-size: 14px !important;
+      color: #c0392b !important;
+      font-weight: 600;
+    }
+
+    /* ── Highlight block ── */
+    .highlight {
+      border-left: 3px solid var(--black);
+      padding: 16px 20px;
+      margin: 24px 0;
+      background: var(--grey-100);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .highlight p {
+      margin: 0 !important;
+      font-size: 14px !important;
+      color: var(--black) !important;
+      font-weight: 500;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--grey-200);
+      margin: 52px 0;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--black);
+      border-radius: 24px;
+      padding: 40px;
+      margin: 48px 0 64px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 24px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:hover { opacity: 0.85; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--grey-200);
+      padding: 32px var(--side-pad);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy { font-size: 13px; color: var(--grey-400); }
+
+    .footer-links { display: flex; gap: 20px; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--grey-400);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--black); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      :root { --side-pad: 20px; }
+
+      .hero { padding: 48px 0 36px; }
+
+      .intro-box { padding: 22px 20px; }
+
+      .rules-grid { grid-template-columns: 1fr; }
+
+      .contact-card { padding: 32px 24px; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="wordmark" href="#">unsentt</a>
+      <span class="doc-badge">Terms of Service</span>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Legal</p>
+      <h1 class="hero-title">Terms of Service</h1>
+      <p class="hero-meta">Effective date: 1 May 2025 &nbsp;·&nbsp; Last updated: 1 May 2025</p>
+    </div>
+
+    <div class="intro-box">
+      <p>
+        These Terms govern your use of Unsentt, operated by
+        <strong>Sircle Networking Pvt Ltd.</strong>
+        By creating an account or using the app, you agree to these Terms.
+        Please read them — they're written to be clear, not to bury you in legalese.
+      </p>
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Who can use Unsentt</h2>
+      <p>
+        You must be <strong>13 years of age or older</strong> to use Unsentt.
+        By using the app, you confirm that you meet this requirement.
+        If you are under 13, you are not permitted to create an account or use the service.
+      </p>
+      <p>
+        Unsentt is currently intended for students and employees of colleges and institutions
+        in India. Access from other regions is not prohibited but local availability may vary.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 2 -->
+    <div class="section">
+      <span class="section-number">02</span>
+      <h2 class="section-title">Your account</h2>
+      <p>
+        You sign in using your Google or Apple account. We never see or store your password.
+        You choose a username that becomes your public identity on Unsentt — pick one that
+        represents you without revealing your real identity if you prefer to stay anonymous.
+      </p>
+      <p>
+        You are responsible for all activity that occurs under your account.
+        Do not share access to your account with others.
+      </p>
+      <div class="highlight">
+        <p>
+          Usernames must not impersonate real people, brands, or institutions.
+          We reserve the right to reclaim usernames that violate this rule.
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 3 -->
+    <div class="section">
+      <span class="section-number">03</span>
+      <h2 class="section-title">What you can post</h2>
+      <p>
+        Unsentt lets you post one sentence at a time — up to 100 characters — along with
+        optional hashtags and media. Posts expire automatically after 24 hours.
+        You may post up to 5 times per day.
+      </p>
+      <p>
+        By posting, you confirm that your content does not violate these Terms or any
+        applicable laws, and you grant Sircle Networking Pvt Ltd a non-exclusive,
+        royalty-free licence to display your content within the app for as long as it exists.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 4 -->
+    <div class="section">
+      <span class="section-number">04</span>
+      <h2 class="section-title">What is not allowed</h2>
+      <p>The following content and behaviours are strictly prohibited on Unsentt:</p>
+
+      <div class="rules-grid">
+        <div class="rule-card">
+          <span class="rule-card-icon">🚫</span>
+          <div class="rule-card-title">Harassment & bullying</div>
+          <div class="rule-card-desc">Targeting, threatening, or intimidating any individual or group.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">💬</span>
+          <div class="rule-card-title">Hate speech</div>
+          <div class="rule-card-desc">Content that promotes hatred based on race, religion, gender, sexuality, or origin.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">🔞</span>
+          <div class="rule-card-title">Sexual content</div>
+          <div class="rule-card-desc">Explicit or sexually suggestive content of any kind.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">📰</span>
+          <div class="rule-card-title">Misinformation</div>
+          <div class="rule-card-desc">Deliberately false or misleading information that could cause harm.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">🔒</span>
+          <div class="rule-card-title">Privacy violations</div>
+          <div class="rule-card-desc">Sharing another person's private information without their consent.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">⚠️</span>
+          <div class="rule-card-title">Self-harm content</div>
+          <div class="rule-card-desc">Content that promotes, glorifies, or provides instructions for self-harm or suicide.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">🤖</span>
+          <div class="rule-card-title">Spam & manipulation</div>
+          <div class="rule-card-desc">Automated posting, fake engagement, or coordinated inauthentic behaviour.</div>
+        </div>
+        <div class="rule-card">
+          <span class="rule-card-icon">⚖️</span>
+          <div class="rule-card-title">Illegal content</div>
+          <div class="rule-card-desc">Content that violates any applicable Indian or international law.</div>
+        </div>
+      </div>
+
+      <div class="warning">
+        <p>
+          Child sexual abuse and exploitation (CSAE) is absolutely prohibited.
+          Any such content will be immediately removed and reported to the National Centre for
+          Missing &amp; Exploited Children (NCMEC) and relevant Indian authorities, including
+          the Cyber Crime Cell. Zero tolerance. No exceptions.
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 5 -->
+    <div class="section">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Content moderation</h2>
+      <p>
+        All posts are automatically screened by OpenAI's moderation API before publishing.
+        Posts that violate our policies are blocked before they go live.
+      </p>
+      <p>
+        Posts that receive multiple reports from other users are automatically hidden and
+        reviewed by our team. Posts can also be reported for manual review using the
+        in-app Report button.
+      </p>
+      <p>
+        We review reports as promptly as possible. If you believe a moderation decision
+        was made in error, contact us at
+        <a href="mailto:support@cocial.in" style="color: var(--black); font-weight: 600;">support@cocial.in</a>.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 6 -->
+    <div class="section">
+      <span class="section-number">06</span>
+      <h2 class="section-title">Enforcement</h2>
+      <p>
+        If your account violates these Terms, we may take the following actions depending
+        on the severity and frequency of the violation:
+      </p>
+      <div class="pill-list">
+        <span class="pill">Hide individual posts</span>
+        <span class="pill">Suspend your account temporarily</span>
+        <span class="pill">Permanently ban your account</span>
+        <span class="pill">Report to authorities</span>
+      </div>
+      <p>
+        Sircle Networking Pvt Ltd reserves the right to suspend or terminate any account
+        at any time, with or without notice, for conduct that we determine is harmful to
+        the community or violates these Terms.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 7 -->
+    <div class="section">
+      <span class="section-number">07</span>
+      <h2 class="section-title">Anonymity and safety</h2>
+      <p>
+        Unsentt is designed to let you post anonymously. However, anonymity is not a
+        shield for harmful behaviour. We retain technical logs that, in cases of serious
+        legal violations, safety threats, or court orders, may be disclosed to law
+        enforcement authorities.
+      </p>
+      <p>
+        If you feel that you or someone else is in immediate danger, please contact
+        emergency services. For non-urgent safety concerns, email us at
+        <a href="mailto:support@cocial.in" style="color: var(--black); font-weight: 600;">support@cocial.in</a>.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 8 -->
+    <div class="section">
+      <span class="section-number">08</span>
+      <h2 class="section-title">Intellectual property</h2>
+      <p>
+        Unsentt and all associated branding, design, and software are owned by
+        Sircle Networking Pvt Ltd. You may not copy, reverse-engineer, or redistribute
+        any part of the app without our written permission.
+      </p>
+      <p>
+        You retain ownership of the content you post. By posting, you grant us the
+        limited right to display it within the app. Once a post expires or is deleted,
+        that licence ends.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 9 -->
+    <div class="section">
+      <span class="section-number">09</span>
+      <h2 class="section-title">Disclaimers and liability</h2>
+      <p>
+        Unsentt is provided "as is" without warranties of any kind. We are not responsible
+        for the content posted by users. We do not guarantee that the service will be
+        uninterrupted, error-free, or free of harmful content at all times.
+      </p>
+      <p>
+        To the maximum extent permitted by applicable law, Sircle Networking Pvt Ltd shall
+        not be liable for any indirect, incidental, or consequential damages arising from
+        your use of the app.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 10 -->
+    <div class="section">
+      <span class="section-number">10</span>
+      <h2 class="section-title">Governing law</h2>
+      <p>
+        These Terms are governed by the laws of India. Any disputes arising from or relating
+        to these Terms shall be subject to the exclusive jurisdiction of the courts of India.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 11 -->
+    <div class="section">
+      <span class="section-number">11</span>
+      <h2 class="section-title">Changes to these Terms</h2>
+      <p>
+        We may update these Terms from time to time. When we do, we will update the
+        "Last updated" date at the top of this page. Significant changes will be
+        notified in-app. Continued use of Unsentt after changes are posted constitutes
+        your acceptance of the updated Terms.
+      </p>
+    </div>
+
+    <!-- Contact card -->
+    <div class="contact-card">
+      <h2>Questions or concerns?</h2>
+      <p>We take every message seriously. Reach us any time.</p>
+      <a class="contact-link" href="mailto:support@cocial.in">support@cocial.in</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2025 Sircle Networking Pvt Ltd</span>
+      <nav class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
