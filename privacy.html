@@ -1,1 +1,654 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Unsentt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --grey-100: #f5f5f5;
+      --grey-200: #e8e8e8;
+      --grey-400: #999999;
+      --grey-600: #555555;
+      --border: #c4c4c4;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --max-width: 720px;
+      --side-pad: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--grey-200);
+      padding: 0 var(--side-pad);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-badge {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--grey-600);
+      background: var(--grey-100);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--grey-200);
+      margin-bottom: 48px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--grey-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-meta {
+      font-size: 14px;
+      color: var(--grey-400);
+      font-weight: 500;
+    }
+
+    /* ── Intro box ── */
+    .intro-box {
+      background: var(--grey-100);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      border: 1px solid var(--grey-200);
+    }
+
+    .intro-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--grey-600);
+    }
+
+    .intro-box strong {
+      color: var(--black);
+      font-weight: 700;
+    }
+
+    /* ── Sections ── */
+    .section {
+      margin-bottom: 52px;
+    }
+
+    .section-number {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--grey-400);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--grey-600);
+      margin-bottom: 16px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Data table ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .data-table th {
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 14px 18px;
+      text-align: left;
+    }
+
+    .data-table td {
+      padding: 14px 18px;
+      font-size: 14px;
+      color: var(--grey-600);
+      border-bottom: 1px solid var(--grey-200);
+      vertical-align: top;
+    }
+
+    .data-table tr:last-child td { border-bottom: none; }
+    .data-table tr:nth-child(even) td { background: var(--grey-100); }
+
+    .data-table td:first-child {
+      font-weight: 600;
+      color: var(--black);
+      white-space: nowrap;
+    }
+
+    /* ── Pill list ── */
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .pill {
+      display: inline-block;
+      background: var(--grey-100);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+    }
+
+    /* ── Highlight block ── */
+    .highlight {
+      border-left: 3px solid var(--black);
+      padding: 16px 20px;
+      margin: 24px 0;
+      background: var(--grey-100);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .highlight p {
+      margin: 0 !important;
+      font-size: 14px !important;
+      color: var(--black) !important;
+      font-weight: 500;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--grey-200);
+      margin: 52px 0;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: var(--black);
+      border-radius: 24px;
+      padding: 40px;
+      margin: 48px 0 64px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 24px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:hover { opacity: 0.85; }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--grey-200);
+      padding: 32px var(--side-pad);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy {
+      font-size: 13px;
+      color: var(--grey-400);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--grey-400);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--black); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      :root { --side-pad: 20px; }
+
+      .hero { padding: 48px 0 36px; }
+
+      .intro-box { padding: 22px 20px; }
+
+      .contact-card { padding: 32px 24px; }
+
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 12px 14px; }
+      .data-table td:first-child { white-space: normal; }
+
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="wordmark" href="#">unsentt</a>
+      <span class="doc-badge">Privacy Policy</span>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Legal</p>
+      <h1 class="hero-title">Privacy Policy</h1>
+      <p class="hero-meta">Effective date: 1 May 2025 &nbsp;·&nbsp; Last updated: 1 May 2025</p>
+    </div>
+
+    <div class="intro-box">
+      <p>
+        Unsentt is built around anonymity. Your real name and email address are
+        <strong>never stored, never shown publicly, and never sold.</strong>
+        This policy explains exactly what we do collect, why, and how you stay in control.
+      </p>
+    </div>
+
+    <!-- 1 -->
+    <div class="section">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Who we are</h2>
+      <p>
+        Unsentt is operated by <strong>Sircle Networking Pvt Ltd</strong>, a company incorporated
+        in India. References to "we", "us", or "our" in this policy refer to Sircle Networking Pvt Ltd.
+      </p>
+      <p>
+        If you have any questions about this policy or your data, reach us at
+        <a href="mailto:support@cocial.in" style="color: var(--black); font-weight: 600;">support@cocial.in</a>.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 2 -->
+    <div class="section">
+      <span class="section-number">02</span>
+      <h2 class="section-title">What we collect</h2>
+      <p>We collect the minimum information needed to run the app safely and well.</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Data</th>
+            <th>Why we collect it</th>
+            <th>Shared?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firebase UID</td>
+            <td>Unique identifier for your account. Never visible to other users.</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Username</td>
+            <td>Your chosen public handle (e.g. @sunflower42). Shown on your posts.</td>
+            <td>Within app only</td>
+          </tr>
+          <tr>
+            <td>College / institution</td>
+            <td>Used to filter and display your college feed. Shown on posts.</td>
+            <td>Within app only</td>
+          </tr>
+          <tr>
+            <td>Posts & interactions</td>
+            <td>Content you create, reactions, comments, reposts, and reports.</td>
+            <td>Within app only</td>
+          </tr>
+          <tr>
+            <td>View duration</td>
+            <td>How long you spend on each post. Used to rank content quality.</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>FCM device token</td>
+            <td>Your device's push notification address. Used to send notifications.</td>
+            <td>No</td>
+          </tr>
+          <tr>
+            <td>Media (images / GIFs)</td>
+            <td>Files you attach to posts. Stored on Azure Blob Storage.</td>
+            <td>Within app only</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="highlight">
+        <p>
+          We use Google / Apple sign-in for authentication only. Your real name and email address
+          from those providers are <strong>never stored in our database and never shown to anyone.</strong>
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 3 -->
+    <div class="section">
+      <span class="section-number">03</span>
+      <h2 class="section-title">How we use your data</h2>
+      <p>We use the data we collect exclusively to:</p>
+      <div class="pill-list">
+        <span class="pill">Run and improve the app</span>
+        <span class="pill">Rank content by quality</span>
+        <span class="pill">Send push notifications</span>
+        <span class="pill">Moderate harmful content</span>
+        <span class="pill">Respond to safety reports</span>
+        <span class="pill">Detect and prevent abuse</span>
+      </div>
+      <p>
+        Post text is processed by OpenAI's moderation API to detect policy violations before
+        publishing. OpenAI processes this text solely for moderation and does not use it to
+        train models. No other third party receives your data for advertising or analytics purposes.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 4 -->
+    <div class="section">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Third-party services</h2>
+      <p>We use the following services to operate Unsentt:</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Service</th>
+            <th>Purpose</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Firebase (Google)</td>
+            <td>Authentication, database (Firestore), and cloud functions</td>
+          </tr>
+          <tr>
+            <td>Firebase Cloud Messaging</td>
+            <td>Push notifications</td>
+          </tr>
+          <tr>
+            <td>OpenAI</td>
+            <td>Content moderation — post text is checked before publishing</td>
+          </tr>
+          <tr>
+            <td>Azure Blob Storage (Microsoft)</td>
+            <td>Storage for images and GIFs attached to posts</td>
+          </tr>
+          <tr>
+            <td>Apple / Google Sign-In</td>
+            <td>Authentication only — we never receive or store your password</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        Each service is bound by its own privacy policy. We only share data with them to the
+        extent necessary for them to provide their service to us.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 5 -->
+    <div class="section">
+      <span class="section-number">05</span>
+      <h2 class="section-title">Posts and anonymity</h2>
+      <p>
+        Posts on Unsentt are tied to your username, not your real identity. Other users see
+        only your username, avatar, and college name — never your name, email, or any information
+        from your Google or Apple account.
+      </p>
+      <p>
+        Posts expire automatically 24 hours after creation and are permanently deleted from
+        our database. Reactions, comments, and reposts associated with an expired post are
+        also removed.
+      </p>
+      <div class="highlight">
+        <p>
+          Anonymity does not mean immunity. In cases of serious legal violations or safety
+          threats, we may be required by law to disclose account information to authorities.
+        </p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 6 -->
+    <div class="section">
+      <span class="section-number">06</span>
+      <h2 class="section-title">Your rights and controls</h2>
+      <p>You are in control of your data. At any time you can:</p>
+      <div class="pill-list">
+        <span class="pill">Delete individual posts</span>
+        <span class="pill">Delete your account from Settings</span>
+        <span class="pill">Block other users</span>
+        <span class="pill">Report content</span>
+        <span class="pill">Request a data export</span>
+      </div>
+      <p>
+        Deleting your account removes all your posts, comments, reactions, reposts, follow
+        relationships, and your user record from our database. This action is permanent
+        and cannot be undone.
+      </p>
+      <p>
+        To request a copy of your data or ask any questions about your rights, email us at
+        <a href="mailto:support@cocial.in" style="color: var(--black); font-weight: 600;">support@cocial.in</a>.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 7 -->
+    <div class="section">
+      <span class="section-number">07</span>
+      <h2 class="section-title">Children and age requirements</h2>
+      <p>
+        Unsentt is intended for users aged 13 and above. We do not knowingly collect personal
+        information from anyone under 13. If we become aware that a user under 13 has provided
+        us with personal information, we will delete that account and its data immediately.
+      </p>
+      <p>
+        If you believe a child under 13 has created an account, please contact us at
+        <a href="mailto:support@cocial.in" style="color: var(--black); font-weight: 600;">support@cocial.in</a>
+        and we will investigate promptly.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 8 -->
+    <div class="section">
+      <span class="section-number">08</span>
+      <h2 class="section-title">Data retention</h2>
+      <p>
+        Active posts are deleted after 24 hours. Account data is retained for as long as your
+        account exists. If you delete your account, all associated data is permanently removed
+        within 30 days.
+      </p>
+      <p>
+        Anonymised, aggregated analytics data (such as total post counts per hashtag) may be
+        retained indefinitely as it cannot be linked to any individual.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 9 -->
+    <div class="section">
+      <span class="section-number">09</span>
+      <h2 class="section-title">Security</h2>
+      <p>
+        We use industry-standard security measures including encrypted connections (TLS),
+        Firebase security rules that restrict data access to authenticated users, and
+        server-side validation on all write operations via Cloud Functions.
+      </p>
+      <p>
+        No system is perfectly secure. If you discover a security vulnerability, please
+        disclose it responsibly by emailing
+        <a href="mailto:support@cocial.in" style="color: var(--black); font-weight: 600;">support@cocial.in</a>.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <!-- 10 -->
+    <div class="section">
+      <span class="section-number">10</span>
+      <h2 class="section-title">Changes to this policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time. When we do, we will update the
+        "Last updated" date at the top of this page. Significant changes will be notified
+        in-app. Continued use of Unsentt after changes are posted constitutes acceptance
+        of the updated policy.
+      </p>
+    </div>
+
+    <!-- Contact card -->
+    <div class="contact-card">
+      <h2>Questions about privacy?</h2>
+      <p>We're a small team and we read every email.</p>
+      <a class="contact-link" href="mailto:support@cocial.in">support@cocial.in</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">© 2025 Sircle Networking Pvt Ltd</span>
+      <nav class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
