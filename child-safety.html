@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Child Safety Standards — Unsentt</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --grey-100: #f5f5f5;
+      --grey-200: #e8e8e8;
+      --grey-400: #999999;
+      --grey-600: #555555;
+      --border: #c4c4c4;
+      --red: #ff3b30;
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+      --max-width: 720px;
+      --side-pad: 24px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--grey-200);
+      padding: 0 var(--side-pad);
+    }
+
+    .header-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .wordmark {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--black);
+      text-decoration: none;
+      letter-spacing: -2px;
+    }
+
+    .doc-badge {
+      font-family: var(--font-body);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--grey-600);
+      background: var(--grey-100);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 4px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 var(--side-pad);
+    }
+
+    .hero {
+      padding: 64px 0 48px;
+      border-bottom: 1px solid var(--grey-200);
+      margin-bottom: 48px;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--grey-400);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 6vw, 52px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .hero-meta {
+      font-size: 16px;
+      color: var(--grey-600);
+      font-weight: 400;
+      line-height: 1.7;
+    }
+
+    .intro-box {
+      background: var(--grey-100);
+      border-radius: 20px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+      border: 1px solid var(--grey-200);
+    }
+
+    .intro-box p {
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--grey-600);
+    }
+
+    .intro-box strong { color: var(--black); font-weight: 700; }
+
+    .section { margin-bottom: 52px; }
+
+    .section-number {
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--grey-400);
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(22px, 3.5vw, 28px);
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 20px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .section p {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--grey-600);
+      margin-bottom: 16px;
+    }
+
+    .section p:last-child { margin-bottom: 0; }
+
+    .section a { color: var(--black); font-weight: 600; }
+
+    .section ul, .section ol {
+      margin: 0 0 16px 0;
+      padding-left: 20px;
+    }
+
+    .section li {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--grey-600);
+      margin-bottom: 8px;
+    }
+
+    .section li strong { color: var(--black); font-weight: 700; }
+
+    .topic-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 24px 0;
+    }
+
+    .topic-card {
+      background: var(--grey-100);
+      border: 1px solid var(--grey-200);
+      border-radius: 16px;
+      padding: 20px 22px;
+    }
+
+    .topic-card-icon {
+      font-size: 22px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .topic-card-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .topic-card-desc {
+      font-size: 13px;
+      color: var(--grey-600);
+      line-height: 1.5;
+    }
+
+    .highlight {
+      border-left: 3px solid var(--black);
+      padding: 16px 20px;
+      margin: 24px 0;
+      background: var(--grey-100);
+      border-radius: 0 12px 12px 0;
+    }
+
+    .highlight p {
+      margin: 0 !important;
+      font-size: 14px !important;
+      color: var(--black) !important;
+      font-weight: 500;
+    }
+
+    .highlight.strong-note {
+      border-left-color: var(--red);
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--grey-200);
+      margin: 52px 0;
+    }
+
+    .step-list {
+      counter-reset: step;
+      list-style: none;
+      padding-left: 0;
+      margin: 24px 0;
+    }
+
+    .step-list li {
+      position: relative;
+      padding-left: 44px;
+      margin-bottom: 20px;
+      counter-increment: step;
+    }
+
+    .step-list li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--black);
+      color: var(--white);
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .contact-card {
+      background: var(--black);
+      border-radius: 24px;
+      padding: 40px;
+      margin: 48px 0 64px;
+      text-align: center;
+    }
+
+    .contact-card h2 {
+      font-family: var(--font-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .contact-card p {
+      font-size: 15px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 24px;
+    }
+
+    .contact-link {
+      display: inline-block;
+      background: var(--white);
+      color: var(--black);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 50px;
+      transition: opacity 0.15s;
+    }
+
+    .contact-link:hover { opacity: 0.85; }
+
+    footer {
+      border-top: 1px solid var(--grey-200);
+      padding: 32px var(--side-pad);
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-copy { font-size: 13px; color: var(--grey-400); }
+
+    .footer-links { display: flex; gap: 20px; }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--grey-400);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover { color: var(--black); }
+
+    @media (max-width: 600px) {
+      :root { --side-pad: 20px; }
+      .hero { padding: 48px 0 36px; }
+      .intro-box { padding: 22px 20px; }
+      .topic-grid { grid-template-columns: 1fr; }
+      .contact-card { padding: 32px 24px; }
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <a class="wordmark" href="#">unsentt</a>
+      <span class="doc-badge">Child Safety Standards</span>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="hero">
+      <p class="hero-eyebrow">Trust &amp; Safety</p>
+      <h1 class="hero-title">Child safety standards.</h1>
+      <p class="hero-meta">
+        Unsentt has zero tolerance for child sexual abuse and exploitation.
+        This page explains our standards, how we enforce them, and how to
+        reach our child safety team directly.
+      </p>
+    </div>
+
+    <div class="intro-box">
+      <p>
+        <strong>Unsentt strictly prohibits child sexual abuse material (CSAM) and
+        any content, behavior, or user that sexualizes, exploits, endangers,
+        or otherwise harms minors.</strong> This applies across every part of
+        our platform — posts, comments, images, profiles, usernames, and
+        private communications — with no exceptions.
+      </p>
+    </div>
+
+    <div class="section">
+      <span class="section-number">01</span>
+      <h2 class="section-title">Our policy</h2>
+      <p>
+        Unsentt does not allow content that depicts, promotes, normalizes,
+        glorifies, or facilitates the sexual abuse or exploitation of minors.
+        This includes, but is not limited to:
+      </p>
+      <ul>
+        <li><strong>Child sexual abuse material (CSAM)</strong> in any form, real or simulated.</li>
+        <li><strong>Sexualization of minors</strong>, including suggestive or exploitative depictions of anyone who is or appears to be under 18.</li>
+        <li><strong>Grooming behavior</strong>, including attempts by adults to build inappropriate trust or contact with minors.</li>
+        <li><strong>Solicitation</strong> of sexual content, images, or contact involving minors.</li>
+        <li><strong>Sextortion or trafficking</strong> of minors, or any content facilitating it.</li>
+      </ul>
+      <p>
+        Any account found to violate this policy is permanently banned. Where
+        legally required, we preserve relevant account and content data and
+        report it to the appropriate authorities, including the National
+        Center for Missing &amp; Exploited Children (NCMEC) via its CyberTipline
+        in the United States, and equivalent national bodies elsewhere.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <span class="section-number">02</span>
+      <h2 class="section-title">How we enforce it</h2>
+      <p>Our approach combines in-app reporting tools, active moderation, and account-level enforcement.</p>
+
+      <div class="topic-grid">
+        <div class="topic-card">
+          <span class="topic-card-icon">🚩</span>
+          <div class="topic-card-title">In-app reporting</div>
+          <div class="topic-card-desc">Every post, comment, and profile on Unsentt can be reported directly from within the app, at any time.</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">🔍</span>
+          <div class="topic-card-title">Human review</div>
+          <div class="topic-card-desc">Reports involving child safety are routed to our moderation queue and reviewed as a priority.</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">⛔</span>
+          <div class="topic-card-title">Removal &amp; bans</div>
+          <div class="topic-card-desc">Violating content is removed immediately and the responsible account is permanently banned.</div>
+        </div>
+        <div class="topic-card">
+          <span class="topic-card-icon">📋</span>
+          <div class="topic-card-title">Legal reporting</div>
+          <div class="topic-card-desc">Confirmed CSAM is reported to NCMEC and relevant law enforcement as required by law.</div>
+        </div>
+      </div>
+
+      <p>
+        We comply with all applicable child safety laws and regulations,
+        including mandatory reporting obligations, in every market where
+        Unsentt is available.
+      </p>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <span class="section-number">03</span>
+      <h2 class="section-title">How to report a concern</h2>
+      <p>If you see something on Unsentt that concerns you, please report it right away using either method below.</p>
+
+      <ol class="step-list">
+        <li>
+          <strong>In the app:</strong> Open the post, comment, or profile in
+          question, tap the menu (⋯) icon, and select
+          <strong>Report</strong>. Choose the reason that best describes the
+          issue and submit — our moderation team reviews every report.
+        </li>
+        <li>
+          <strong>By email:</strong> If it's urgent, or you'd rather not use
+          the in-app flow, email our child safety team directly at
+          <a href="mailto:childsafety@cocial.in">childsafety@cocial.in</a>.
+          Please include as much detail as possible — usernames, post links,
+          and screenshots if available — so we can act quickly.
+        </li>
+      </ol>
+
+      <div class="highlight strong-note">
+        <p>If a child is in immediate danger, please contact local law enforcement or emergency services first, in addition to reporting to us.</p>
+      </div>
+    </div>
+
+    <hr class="divider" />
+
+    <div class="section">
+      <span class="section-number">04</span>
+      <h2 class="section-title">Child safety point of contact</h2>
+      <p>
+        Our designated Child Safety team is responsible for handling reports
+        related to CSAM and CSAE, and can speak directly to our prevention
+        practices and compliance on request.
+      </p>
+      <p>
+        Reach us at
+        <a href="mailto:childsafety@cocial.in">childsafety@cocial.in</a>.
+        We aim to acknowledge every child safety report within 24 hours.
+      </p>
+    </div>
+
+    <div class="contact-card">
+      <h2>Report a child safety concern</h2>
+      <p>Every report is reviewed by a real person, as quickly as possible.</p>
+      <a class="contact-link" href="mailto:childsafety@cocial.in">childsafety@cocial.in</a>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; 2026 Sircle Networking Pvt Ltd</span>
+      <nav class="footer-links">
+        <a href="./privacy.html">Privacy Policy</a>
+        <a href="./terms.html">Terms of Service</a>
+        <a href="./support.html">Support</a>
+        <a href="./child-safety.html">Child Safety</a>
+      </nav>
+    </div>
+  </footer>
+
+</body>
+</html>
